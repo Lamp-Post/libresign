@@ -30,8 +30,8 @@ html body #content {
 	position: fixed;
 	inset: 0;
 	margin: 0;
-	width: 100vw;
-	height: 100vh;
+	width: 100dvw;
+	height: 100dvh;
 	border-radius: 0;
 }
 
@@ -41,9 +41,9 @@ html body #content {
 	#app-sidebar {
 		position: fixed;
 		inset: 0;
-		width: 100vw !important;
-		max-width: 100vw !important;
-		height: 100vh;
+		width: 100dvw !important;
+		max-width: 100dvw !important;
+		height: 100dvh;
 		z-index: 2000;
 	}
 }
