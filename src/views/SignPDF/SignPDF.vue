@@ -567,8 +567,10 @@ onBeforeMount(async () => {
 		await getCompatMethod('initIdDocsApprove')()
 	}
 
-	if (isMobile && route.name !== 'SignPDFExternal') {
-		getCompatMethod('toggleSidebar')()
+	if (isMobile) {
+		// Ensure the mobile sign view starts with the sidebar hidden,
+		// even though file initialization may activate the sign tab.
+		sidebarStore.hideSidebar()
 	}
 
 	const pdfs = loadState<string[]>('libresign', 'pdfs', EMPTY_PDFS)
